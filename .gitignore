@@ -8,3 +8,8 @@ node_modules/
 .idea/
 *.local
 encrypted/
+
+# Keep local only (not on GitHub)
+README.md
+wytyczne.md
+assets/wytyczne.md
