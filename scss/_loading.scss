@@ -1,0 +1,167 @@
+.planer_loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: $loading-bg;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    max-height: 100dvh;
+    padding: clamp(28px, 5vh, 72px) clamp(16px, 3vw, 40px) clamp(20px, 3.5vh, 48px);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    width: min(700px, 100%);
+    text-align: center;
+  }
+
+  &__austria {
+    width: clamp(72px, 8vw, 96px);
+    height: auto;
+    margin: 0 auto clamp(12px, 1.8vh, 20px);
+  }
+
+  &__title {
+    margin: 0;
+    color: $text-muted;
+    font-size: clamp(28px, 3.6vw, 50px);
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  &__subtitle {
+    margin: clamp(6px, 1vh, 9px) 0 0;
+    color: $text-soft;
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  &__visual {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 0;
+    margin: clamp(8px, 1.5vh, 20px) 0;
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    max-height: min(52vh, 520px);
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center center;
+    background: transparent;
+  }
+
+  &__progress-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: min(540px, 100%);
+    margin: 0 auto;
+    color: $text-progress;
+
+    p {
+      margin: 0 0 clamp(16px, 2.5vh, 31px);
+      font-size: clamp(11px, 1.1vw, 14px);
+      font-weight: 300;
+      text-align: center;
+    }
+
+    span {
+      margin-top: 10px;
+      font-size: clamp(10px, 1vw, 12px);
+    }
+  }
+
+  &__progress {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border: 0;
+    background: $progress-track;
+
+    &::-webkit-progress-bar {
+      background: $progress-track;
+    }
+
+    &::-webkit-progress-value {
+      background: $red;
+    }
+
+    &::-moz-progress-bar {
+      background: $red;
+    }
+  }
+
+  &__gazeta {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    width: clamp(70px, 8vw, 84px);
+    height: auto;
+    margin: clamp(18px, 3vh, 36px) auto 0;
+  }
+
+  &__legal {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    width: min(920px, 100%);
+    margin: clamp(12px, 2vh, 20px) auto 0;
+  }
+}
+
+@include mobile {
+  .planer_loading-screen {
+    &__stage {
+      padding: 36px 20px 24px;
+    }
+
+    &__video {
+      max-height: min(42vh, 360px);
+    }
+
+    &__progress-wrap {
+      width: min(300px, 100%);
+    }
+
+    &__legal {
+      font-size: 8px;
+    }
+  }
+}

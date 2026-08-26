@@ -1,0 +1,201 @@
+.planer_route--home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.planer_home-frame {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: var(--planer-frame-width, min(calc(100% - 80px), $desktop-frame));
+  max-width: calc(100vw - var(--planer-frame-pad-x, 80px));
+  max-height: var(--planer-frame-max-h, none);
+  aspect-ratio: 1640 / 928;
+  height: auto;
+  margin: 0 auto;
+  border-radius: $radius;
+  color: $white;
+  perspective: 1200px;
+  container-type: inline-size;
+  container-name: planer-home;
+
+  &.is-parallax .planer_frame-video {
+    transition: none;
+  }
+
+  &__shade {
+    position: absolute;
+    inset: -4%;
+    z-index: 1;
+    background:
+      linear-gradient(90deg, rgba(4, 13, 24, .62) 0%, rgba(4, 13, 24, .26) 48%, rgba(4, 13, 24, 0) 74%),
+      linear-gradient(0deg, rgba(0, 0, 0, .28), transparent 45%);
+    pointer-events: none;
+    will-change: transform;
+    transition: transform .45s ease-out;
+  }
+
+  &__copy {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__description {
+    position: absolute;
+    top: 39%;
+    left: 4.4%;
+    width: 48%;
+    max-width: 60%;
+    margin: 0;
+    font-size: clamp(13px, 1.05cqw, 17px);
+    font-weight: 700;
+    line-height: 1.9;
+  }
+
+  h1 {
+    position: absolute;
+    left: 4.4%;
+    bottom: 5.8%;
+    width: 55%;
+    max-width: 60%;
+    margin: 0;
+    font-size: clamp(34px, 5.5cqw, 92px);
+    font-weight: 400;
+    line-height: .8;
+    letter-spacing: clamp(-2.5px, -.3cqw, -4.5px);
+  }
+}
+
+.planer_plan-cta {
+  position: absolute;
+  z-index: 3;
+  right: clamp(12px, 2.4cqw, 40px);
+  bottom: clamp(12px, 2.4cqw, 36px);
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 1.1cqw, 16px);
+  min-height: 0;
+  height: clamp(44px, 3.9cqw, 62px);
+  padding: 4px 5px 4px clamp(14px, 1.7cqw, 26px);
+  border-radius: 999px;
+  color: $black;
+  background: $green;
+  font-size: clamp(11px, .95cqw, 16px);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+
+  span {
+    color: $black;
+  }
+
+  img {
+    flex: 0 0 auto;
+    width: clamp(36px, 3.2cqw, 52px);
+    height: clamp(36px, 3.2cqw, 52px);
+  }
+}
+
+.planer_home-ai {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: $black;
+  font-size: 11px;
+
+  img {
+    flex: 0 0 47px;
+    width: 47px;
+    height: 47px;
+  }
+
+  &--desktop {
+    width: var(--planer-frame-width, min(calc(100% - 80px), $desktop-frame));
+    max-width: calc(100vw - var(--planer-frame-pad-x, 80px));
+    margin: 7px auto 0;
+  }
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.planer_home-description-mobile {
+  display: none;
+}
+
+@include mobile {
+  .planer_home-frame {
+    width: calc(100% - 10px);
+    max-width: none;
+    max-height: none;
+    height: 465px;
+    margin-top: 30px;
+    aspect-ratio: auto;
+    border-radius: 27px;
+    container-type: normal;
+
+    &__shade {
+      background: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0) 66%);
+    }
+
+    &__copy {
+      inset: auto;
+      right: 20px;
+      bottom: 58px;
+      left: 27px;
+    }
+
+    &__description {
+      display: none;
+    }
+
+    h1 {
+      position: static;
+      width: auto;
+      max-width: none;
+      font-size: 34px;
+      line-height: .95;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  .planer_plan-cta {
+    right: 8px;
+    bottom: 8px;
+    gap: 8px;
+    height: 48px;
+    padding: 4px 4px 4px 16px;
+    font-size: 12px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .planer_home-ai--desktop {
+    display: none;
+  }
+
+  .planer_home-ai--mobile {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 49px;
+    display: flex;
+    gap: 17px;
+    color: $black;
+    font-size: 10px;
+  }
+
+  .planer_home-description-mobile {
+    display: block;
+    margin: 27px 26px 0;
+    font-size: 16px;
+    line-height: 1.22;
+  }
+}

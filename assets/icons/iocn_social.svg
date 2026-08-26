@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="iocn_social" transform="translate(-596 -854)">
+    <circle id="Ellipse_13" data-name="Ellipse 13" cx="21" cy="21" r="21" transform="translate(596 854)" fill="#beff96"/>
+    <path id="Icon_material-social-distance" data-name="Icon material-social-distance" d="M5.5,7A2.5,2.5,0,1,1,8,9.5,2.507,2.507,0,0,1,5.5,7Zm5.975,4.475a8.688,8.688,0,0,0-6.95,0A2.512,2.512,0,0,0,3,13.787V14.5H13v-.712a2.514,2.514,0,0,0-1.525-2.312ZM23,9.5A2.5,2.5,0,1,0,20.5,7,2.507,2.507,0,0,0,23,9.5Zm3.475,1.975a8.688,8.688,0,0,0-6.95,0A2.512,2.512,0,0,0,18,13.788V14.5H28v-.712a2.514,2.514,0,0,0-1.525-2.312ZM28,22l-5-5v3.75H8V17L3,22l5,5V23.25H23V27Z" transform="translate(601.5 860.682)"/>
+  </g>
+</svg>

@@ -1,0 +1,189 @@
+.planer_app-shell {
+  --planer-frame-pad-x: clamp(24px, 4vw, 80px);
+  --planer-frame-max-h: calc(100dvh - 90px - 32px);
+  --planer-frame-width: min(
+    calc(100% - var(--planer-frame-pad-x)),
+    #{$desktop-frame},
+    calc(var(--planer-frame-max-h) * 1640 / 928)
+  );
+  min-height: 100vh;
+  background: $white;
+}
+
+.planer_site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: min(calc(100% - var(--planer-frame-pad-x)), $desktop-frame);
+  max-width: calc(100vw - var(--planer-frame-pad-x));
+  height: 90px;
+  margin: 0 auto;
+}
+
+.planer_app.is-route-home .planer_site-header,
+.planer_app.is-route-form .planer_site-header,
+.planer_app.is-route-result .planer_site-header {
+  width: var(--planer-frame-width);
+}
+
+.planer_brand {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  color: $black;
+  text-decoration: none;
+
+  &__logo {
+    width: 96px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  &__line {
+    width: 1px;
+    height: 54px;
+    margin: 0 17px;
+    background: $border-muted;
+  }
+
+  &__text {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: .9;
+    letter-spacing: -.7px;
+
+    small {
+      display: block;
+      margin-top: 8px;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.planer_header-home {
+  width: 43px;
+  height: 43px;
+  margin-right: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+
+  img {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.planer_route {
+  min-height: calc(100vh - 90px);
+}
+
+.planer_frame-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.03);
+  transform-origin: center center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.planer_promo-label {
+  position: absolute;
+  z-index: 3;
+  top: clamp(12px, 2cqw, 19px);
+  left: clamp(20px, 2.4cqw, 39px);
+  color: rgba(255, 255, 255, .85);
+  font-size: clamp(8px, .6cqw, 9px);
+}
+
+.planer_app.is-route-result {
+  overflow: hidden;
+  height: 100dvh;
+
+  .planer_app-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .planer_route--result {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+@include mobile {
+  .planer_app-shell {
+    --planer-frame-width: calc(100% - 10px);
+  }
+
+  .planer_site-header {
+    width: auto;
+    max-width: none;
+    height: 86px;
+    margin: 0 10px 0 28px;
+  }
+
+  .planer_brand {
+    margin-left: 0;
+
+    &__logo {
+      width: 75px;
+      height: auto;
+    }
+
+    &__line {
+      height: 38px;
+      margin: 0 9px;
+    }
+
+    &__text {
+      font-size: 18px;
+      letter-spacing: -.4px;
+
+      small {
+        margin-top: 6px;
+        font-size: 7px;
+      }
+    }
+  }
+
+  .planer_header-home {
+    margin-right: 0;
+
+    &,
+    img {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  .planer_route {
+    min-height: calc(100vh - 86px);
+  }
+
+  .planer_promo-label {
+    display: none;
+  }
+
+  .planer_app.is-route-form .planer_site-header {
+    height: 70px;
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71">
+  <g id="icon_map-black" transform="translate(-264 -848)">
+    <g id="Group_14" data-name="Group 14">
+      <path id="Path_3" data-name="Path 3" d="M35.5,0A35.5,35.5,0,1,1,0,35.5,35.5,35.5,0,0,1,35.5,0Z" transform="translate(264 848)"/>
+      <path id="Icon_feather-map" data-name="Icon feather-map" d="M1.5,9V33L12,27l12,6,10.5-6V3L24,9,12,3ZM12,3V27M24,9V33" transform="translate(282 865.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

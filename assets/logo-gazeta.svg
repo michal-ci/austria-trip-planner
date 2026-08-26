@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.644" height="33" viewBox="0 0 83.644 33">
+  <g id="Group_6471" data-name="Group 6471" transform="translate(-385 -447)">
+    <path id="Path_421" data-name="Path 421" d="M0,0V33l4.9-5.228H83.644V0Z" transform="translate(385 447)" fill="#beff96"/>
+    <g id="Group_408" data-name="Group 408" transform="translate(387.614 449.287)">
+      <path id="Path_422" data-name="Path 422" d="M28.822,25.668H25.555V21.911a1.144,1.144,0,0,0-2.287,0V36.287a1.144,1.144,0,1,0,2.287,0V31.223h-.98V27.956h4.248v8.331a4.411,4.411,0,0,1-8.822,0V21.911a4.411,4.411,0,1,1,8.822,0Z" transform="translate(-20.001 -17.5)"/>
+      <path id="Path_423" data-name="Path 423" d="M184.418,22.838l-4.652,16.434h4.325v3.267H176.25V39.7L180.9,23.267h-4.325V20h7.841Z" transform="translate(-155.83 -19.673)"/>
+      <path id="Path_424" data-name="Path 424" d="M257.188,23.267h-3.921v6.864h2.94v2.614h-2.94v6.534h3.921v3.267H250V20h7.188Z" transform="translate(-219.941 -19.673)"/>
+      <path id="Path_425" data-name="Path 425" d="M320.881,42.544h-3.268V23.267H315V20h8.495v3.267h-2.614Z" transform="translate(-276.446 -19.673)"/>
+      <path id="Path_426" data-name="Path 426" d="M459.3,171.094a1.8,1.8,0,1,1,1.8-1.8,1.8,1.8,0,0,1-1.8,1.8" transform="translate(-400.322 -147.896)"/>
+      <path id="Path_427" data-name="Path 427" d="M570,42.544V20h3.268V39.277h3.266v3.267Z" transform="translate(-498.119 -19.673)"/>
+      <path id="Path_428" data-name="Path 428" d="M101.849,20h-3.5L95.229,42.544h3.3l.726-5.228h1.7l.726,5.228h3.3ZM99.612,34.7l.487-6.534.487,6.534Z" transform="translate(-85.397 -19.673)"/>
+      <path id="Path_429" data-name="Path 429" d="M499.705,20H495V42.544h3.268V34.7h1.438a3.468,3.468,0,0,0,3.464-3.464V23.464A3.468,3.468,0,0,0,499.705,20m.2,11.24a.2.2,0,0,1-.2.2h-1.437V23.267h1.438a.2.2,0,0,1,.2.2Z" transform="translate(-432.922 -19.673)"/>
+      <path id="Path_430" data-name="Path 430" d="M381.849,20h-3.5l-3.122,22.544h3.3l.726-5.228h1.7l.726,5.228h3.3Zm-2.237,14.7.487-6.534.487,6.534Z" transform="translate(-328.803 -19.673)"/>
+    </g>
+  </g>
+</svg>

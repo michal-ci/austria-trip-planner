@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Austria — inteligentny planer podróży dopasowany do Twojego stylu.">
+  <title>Austria — Twoja podróż zaczyna się tutaj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260823-09">
+</head>
+<body class="planer_app">
+  <section class="planer_loading-screen is-active" data-screen="loading" aria-label="Ładowanie aplikacji">
+    <div class="planer_loading-screen__stage">
+      <div class="planer_loading-screen__content">
+        <img class="planer_loading-screen__austria" src="assets/logo_austria.png" alt="Austria" width="96" height="34">
+        <p class="planer_loading-screen__title">TWOJA PODRÓŻ</p>
+        <p class="planer_loading-screen__subtitle">ZACZYNA SIĘ TUTAJ</p>
+      </div>
+
+      <div class="planer_loading-screen__visual">
+        <video class="planer_loading-screen__video" autoplay muted loop playsinline preload="auto" poster="assets/loading-scene.jpg" data-loading-video>
+          <source src="assets/video/bg_landing.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="planer_loading-screen__progress-wrap">
+        <p data-loading-status>PRZYGOTOWUJEMY TWOJĄ PODRÓŻ.....</p>
+        <progress class="planer_loading-screen__progress" value="0" max="100" data-loading-progress></progress>
+        <span data-loading-value>0%</span>
+      </div>
+
+      <img class="planer_loading-screen__gazeta" src="assets/logo-gazeta.svg" alt="Gazeta.pl" width="84" height="33">
+      <p class="planer_legal-note planer_loading-screen__legal">Właściciel niniejszego serwisu nie wyraża zgody na zwielokrotnianie ani inne korzystanie z utworów rozpowszechnionych w tym serwisie, w celu eksploracji tekstów i danych. Więcej informacji w zastrzeżeniu dot. eksploracji tekstów i danych</p>
+    </div>
+  </section>
+
+  <div class="planer_app-shell" data-screen="app" hidden>
+    <header class="planer_site-header">
+      <a class="planer_brand" href="#home" data-go="home" aria-label="Austria — strona główna">
+        <img class="planer_brand__logo" src="assets/logo_austria.png" alt="Austria" width="96" height="34">
+        <span class="planer_brand__line" aria-hidden="true"></span>
+        <span class="planer_brand__text">TWOJA PODRÓŻ<small>ZACZYNA SIĘ TUTAJ</small></span>
+      </a>
+      <button class="planer_header-home" type="button" data-go="home" aria-label="Wróć na stronę główną">
+        <img src="assets/icons/icon_home.svg" alt="" width="43" height="43">
+      </button>
+    </header>
+
+    <main>
+      <section class="planer_route planer_route--home" data-route="home" aria-labelledby="home-title">
+        <div class="planer_home-frame planer_motion-frame">
+          <video class="planer_frame-video" muted loop playsinline preload="metadata" data-motion-video>
+            <source src="assets/video/bg-home.mp4" type="video/mp4">
+          </video>
+          <div class="planer_home-frame__shade" aria-hidden="true"></div>
+          <span class="planer_promo-label">MATERIAŁY PROMOCYJNE</span>
+          <div class="planer_home-ai planer_home-ai--mobile"><img src="assets/icons/ico_ai.svg" alt="Ai" width="47" height="47"><span>odpowiedzi generowane za pomocą przez ai</span></div>
+          <div class="planer_home-frame__copy">
+            <p class="planer_home-frame__description">Zapomnij o standardowych wycieczkach. Pozwól naszemu inteligentnemu planerowi zaprojektować Twoją wymarzoną podróż – od majestatycznych szczytów po ukryte tyrolskie doliny. Stworzymy trasę, której nie ma w żadnym katalogu. Żadnych kompromisów, czysta przygoda skrojona pod Twoje tempo. Wypełnij szybki quiz i odkryj swój własny, unikalny szlak!</p>
+            <h1 id="home-title">GOTOWY NA<br>AUSTRIĘ,<br>JAKIEJ JESZCZE<br>NIE ZNASZ?</h1>
+          </div>
+          <button class="planer_plan-cta" type="button" data-go="form">
+            <span>zaplanuj&nbsp;Podróż</span>
+            <img src="assets/icons/icon_map-black.svg" alt="" width="52" height="52">
+          </button>
+        </div>
+        <div class="planer_home-ai planer_home-ai--desktop"><img src="assets/icons/ico_ai.svg" alt="Ai" width="47" height="47"><span>odpowiedzi generowane za pomocą przez ai</span></div>
+        <p class="planer_home-description-mobile">Zapomnij o standardowych wycieczkach. Pozwól naszemu inteligentnemu planerowi zaprojektować Twoją wymarzoną podróż – od majestatycznych szczytów po ukryte tyrolskie doliny. Stworzymy trasę, której nie ma w żadnym katalogu. Żadnych kompromisów, czysta przygoda skrojona pod Twoje tempo. Wypełnij szybki quiz i odkryj swój własny, unikalny szlak!</p>
+        <div class="planer_ad-block planer_ad-block--index" aria-label="Reklama">
+          <span>REKLAMA</span>
+          <img class="planer_ad-block__creative" src="assets/ads/banner-index.jpg" alt="Lato w Górnej Austrii — Lebensgefühl" width="940" height="300">
+        </div>
+        <footer class="planer_site-footer"><img src="assets/logo-gazeta.svg" alt="Gazeta.pl" width="84" height="33"><p>Właściciel niniejszego serwisu nie wyraża zgody na zwielokrotnianie ani inne korzystanie z utworów rozpowszechnionych w tym serwisie, w celu eksploracji tekstów i danych. Więcej informacji w zastrzeżeniu dot. eksploracji tekstów i danych</p></footer>
+      </section>
+
+      <section class="planer_route planer_route--form" data-route="form" aria-labelledby="form-heading" hidden>
+        <div class="planer_form-frame planer_motion-frame">
+          <video class="planer_frame-video" muted loop playsinline preload="metadata" data-motion-video><source src="assets/video/bg-form.mp4" type="video/mp4"></video>
+          <span class="planer_promo-label">MATERIAŁY PROMOCYJNE</span>
+          <form class="planer_quiz" data-quiz-form>
+            <div class="planer_quiz__counter"><span data-step-number>1</span></div>
+
+            <div class="planer_quiz-step is-active" data-step="1">
+              <h1 id="form-heading">Kiedy chcesz wyruszyć?</h1>
+              <div class="planer_date-grid">
+                <label><span>Od</span><input type="date" name="startDate"></label>
+                <label><span>Do</span><input type="date" name="endDate"></label>
+              </div>
+            </div>
+
+            <div class="planer_quiz-step" data-step="2">
+              <h2>Jaka podróż Cię elektryzuje?</h2>
+              <div class="planer_radio-list">
+                <label><input type="radio" name="style" value="klasyka"><i></i><span>Klasyk bez zaskoczeń - znany kierunek i znana trasa</span></label>
+                <label><input type="radio" name="style" value="natura"><i></i><span>Znajomy cel, ale trasa z zaskoczeniem</span></label>
+                <label><input type="radio" name="style" value="slow"><i></i><span>Zaskakujący cel z klasyczną trasą</span></label>
+              </div>
+            </div>
+
+            <div class="planer_quiz-step" data-step="3">
+              <h2>Skąd startujesz?</h2>
+              <label class="planer_origin-field"><span>Podaj miasto lub kraj</span><input type="text" name="origin" placeholder="Wpisz miasto lub kraj"></label>
+            </div>
+
+            <div class="planer_quiz-step" data-step="4">
+              <h2>Czym chcesz podróżować?</h2>
+              <div class="planer_choice-grid planer_choice-grid--transport">
+                <label><input type="radio" name="transport" value="samochod"><span>Samochodem</span></label>
+                <label><input type="radio" name="transport" value="motor"><span>Motorem</span></label>
+                <label><input type="radio" name="transport" value="kamper"><span>Kamperem</span></label>
+                <label><input type="radio" name="transport" value="rower"><span>Rowerem</span></label>
+                <label><input type="radio" name="transport" value="pieszo"><span>Pieszo</span></label>
+                <label><input type="radio" name="transport" value="pociag"><span>Pociągiem</span></label>
+              </div>
+            </div>
+
+            <div class="planer_quiz-step" data-step="5">
+              <h2>Jak chcesz odkrywać Austrię?</h2>
+              <div class="planer_radio-list">
+                <label><input type="radio" name="pace" value="intensywne"><i></i><span>Intensywnie - dużo miejsc i moc wrażeń</span></label>
+                <label><input type="radio" name="pace" value="zrownowazone"><i></i><span>Złoty środek - zwiedzanie i odpoczynek</span></label>
+                <label><input type="radio" name="pace" value="spokojne"><i></i><span>Spokojnie - mniej punktów, więcej czasu</span></label>
+              </div>
+            </div>
+
+            <div class="planer_quiz-step" data-step="6">
+              <h2>Co Cię interesuje?</h2>
+              <div class="planer_choice-grid planer_choice-grid--interests">
+                <label><input type="checkbox" name="interests" value="gory"><span>Góry i trekking</span></label>
+                <label><input type="checkbox" name="interests" value="jeziora"><span>Jeziora i kąpiele</span></label>
+                <label><input type="checkbox" name="interests" value="miasta"><span>Miasta i kultura</span></label>
+                <label><input type="checkbox" name="interests" value="jedzenie"><span>Lokalna kuchnia</span></label>
+                <label><input type="checkbox" name="interests" value="wellness"><span>Wellness i spa</span></label>
+                <label><input type="checkbox" name="interests" value="rodzina"><span>Podróż z rodziną</span></label>
+                <label><input type="checkbox" name="interests" value="zamki"><span>Zamki i pałace</span></label>
+                <label><input type="checkbox" name="interests" value="natura"><span>Parki i przyroda</span></label>
+                <label><input type="checkbox" name="interests" value="wino"><span>Wino i regiony</span></label>
+                <label><input type="checkbox" name="interests" value="przygoda"><span>Sport i przygoda</span></label>
+              </div>
+            </div>
+
+            <div class="planer_quiz-step" data-step="7">
+              <h2>Jaki budżet bierzesz pod uwagę?</h2>
+              <div class="planer_radio-list">
+                <label><input type="radio" name="budget" value="oszczedny"><i></i><span>Rozsądnie i oszczędnie</span></label>
+                <label><input type="radio" name="budget" value="komfortowy"><i></i><span>Komfortowo, ale bez szaleństw</span></label>
+                <label><input type="radio" name="budget" value="premium"><i></i><span>Premium - liczy się wygoda</span></label>
+              </div>
+            </div>
+
+            <div class="planer_quiz__actions">
+              <button type="button" class="planer_quiz-arrow planer_quiz-arrow--back" data-quiz-prev aria-label="Poprzednie pytanie"><img src="assets/icons/icon_arrow_black.svg" alt="" width="42" height="42"></button>
+              <button type="button" class="planer_quiz-arrow" data-quiz-next aria-label="Następne pytanie"><img src="assets/icons/icon_arrow_black.svg" alt="" width="42" height="42"></button>
+            </div>
+          </form>
+          <div class="planer_form-ai"><img src="assets/icons/ico_ai.svg" alt="Ai" width="47" height="47"><strong>odpowiedzi generowane za pomocą przez ai</strong></div>
+        </div>
+        <div class="planer_ad-block planer_ad-block--form" aria-label="Reklama">
+          <span>REKLAMA</span>
+          <img class="planer_ad-block__creative" src="assets/ads/banner-form.jpg" alt="Lato w Górnej Austrii — Lebensgefühl" width="940" height="300">
+        </div>
+        <footer class="planer_site-footer"><img src="assets/logo-gazeta.svg" alt="Gazeta.pl" width="84" height="33"><p>Właściciel niniejszego serwisu nie wyraża zgody na zwielokrotnianie ani inne korzystanie z utworów rozpowszechnionych w tym serwisie, w celu eksploracji tekstów i danych. Więcej informacji w zastrzeżeniu dot. eksploracji tekstów i danych</p></footer>
+      </section>
+
+      <section class="planer_route planer_route--result" data-route="result" aria-labelledby="result-heading" hidden>
+        <div class="planer_result-frame">
+          <video class="planer_result-background" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/video/bg-form.mp4" type="video/mp4">
+          </video>
+          <div class="planer_result-card">
+            <h1 id="result-heading">Gotowi na podróż nie z tej ziemi?</h1>
+            <div class="planer_result-card__scroll">
+              <article class="planer_result-copy" data-plan-copy></article>
+            </div>
+            <div class="planer_result-card__bottom">
+              <div class="planer_result-links">
+                <a href="https://www.google.com/maps" target="_blank" rel="noreferrer" data-map-link>
+                  <span>Zobacz swoją trasę na mapie!</span>
+                  <img src="assets/icons/inon_map.svg" alt="" width="42" height="42">
+                </a>
+                <button type="button" data-share>
+                  <span>Podziel się swoją podróżą!</span>
+                  <img src="assets/icons/iocn_social.svg" alt="" width="42" height="42">
+                </button>
+              </div>
+              <button class="planer_download-plan" type="button" data-print>
+                <span>Pobierz plan Podróży</span>
+                <img src="assets/icons/icon_pdf.svg" alt="" width="42" height="42">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="planer_result-ai">
+          <img src="assets/icons/ico_ai.svg" alt="Ai" width="47" height="47">
+          <span>odpowiedzi generowane za pomocą przez ai</span>
+        </div>
+        <div class="planer_ad-block planer_ad-block--result" aria-label="Reklama">
+          <span>REKLAMA</span>
+          <img class="planer_ad-block__creative" src="assets/ads/banner-result.jpg" alt="Lato w Górnej Austrii — Lebensgefühl" width="940" height="300">
+        </div>
+        <footer class="planer_site-footer planer_site-footer--result">
+          <img src="assets/logo-gazeta.svg" alt="Gazeta.pl" width="84" height="33">
+          <p>Właściciel niniejszego serwisu nie wyraża zgody na zwielokrotnianie ani inne korzystanie z utworów rozpowszechnionych w tym serwisie, w celu eksploracji tekstów i danych.</p>
+        </footer>
+      </section>
+    </main>
+  </div>
+  <div class="planer_toast" role="status" aria-live="polite" data-toast></div>
+  <script src="js/route-planner.js?v=20260823-06"></script>
+  <script src="js/main.js?v=20260823-06"></script>
+</body>
+</html>

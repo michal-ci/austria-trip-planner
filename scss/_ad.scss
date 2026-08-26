@@ -1,0 +1,49 @@
+.planer_ad-block {
+  width: 940px;
+  margin: 32px auto 0;
+
+  > span {
+    display: block;
+    margin-bottom: 10px;
+    color: $ad-label;
+    font-size: 9px;
+  }
+
+  &__creative {
+    display: block;
+    width: 940px;
+    height: 300px;
+    border: 1px solid $border-light;
+    object-fit: cover;
+  }
+
+  &--form {
+    margin-top: 76px;
+  }
+
+  &--result {
+    margin-top: 40px;
+  }
+}
+
+@include mobile {
+  .planer_ad-block {
+    width: 300px;
+    margin-top: 61px;
+
+    > span {
+      margin-bottom: 7px;
+      font-size: 9px;
+    }
+
+    &__creative {
+      width: 300px;
+      height: 250px;
+      border: 0;
+    }
+
+    &--form {
+      margin-top: 128px;
+    }
+  }
+}
