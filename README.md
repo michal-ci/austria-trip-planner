@@ -25,14 +25,30 @@ Projekt ma 3 główne ekrany:
 
 Plan jest budowany na podstawie lokalnych danych zapisanych w `data/austria-places.json`. Wynik może zostać dodatkowo opisany bardziej narracyjnie przez AI.
 
+## Dostęp do podglądu (StatiCrypt)
+
+Publiczny podgląd jest chroniony przez [StatiCrypt](https://github.com/robinmoisson/staticrypt) (AES-256, odszyfrowanie w przeglądarce):
+
+- link: https://michal-ci.github.io/austria-trip-planner/
+- hasło: `austria2026`
+
+Edycja treści odbywa się w `index.source.html`. Po zmianach uruchom:
+
+```bash
+npm run encrypt
+```
+
+To generuje zaszyfrowany `index.html` publikowany na GitHub Pages.
+
 ## Najważniejsze pliki
 
-- `index.html` – struktura strony,
-- `js/main.js` – logika quizu i generowania wyniku,
+- `index.source.html` – czytelna, edytowalna wersja strony,
+- `index.html` – wersja zaszyfrowana (podgląd online),
+- `js/main.js` – logika quizu i wyniku,
 - `js/route-planner.js` – układanie trasy,
-- `data/austria-places.json` – baza miejsc, zdjęć i czasów przejazdów,
-- `css/style.css` / `scss/` – style strony.
+- `data/austria-places.json` – baza miejsc,
+- `css/style.css` / `scss/` – style.
 
 ## Status
 
-To wersja demonstracyjna przygotowana do prezentacji koncepcji działania planera podróży. Logika trasy i treści są oparte na lokalnych danych i mogą być dalej rozwijane w kolejnych etapach projektu.
+To wersja demonstracyjna. StatiCrypt chroni HTML przed przypadkowym podglądem; pliki JS/CSS/JSON w repozytorium nadal są publiczne jak w każdym projekcie na GitHub Pages.

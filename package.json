@@ -1,0 +1,19 @@
+{
+  "name": "austria-trip-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo planera podróży po Austrii z ochroną StatiCrypt.",
+  "scripts": {
+    "encrypt": "node scripts/encrypt.js",
+    "encrypt:custom": "node scripts/encrypt.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michal-ci/austria-trip-planner.git"
+  },
+  "license": "UNLICENSED",
+  "homepage": "https://michal-ci.github.io/austria-trip-planner/",
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
+  }
+}
